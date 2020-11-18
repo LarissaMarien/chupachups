@@ -1,0 +1,87 @@
+body {
+  background: rgb(254,241,82);
+  perspective: 2000;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 42%;
+  height: 200px;
+  width: 200px;
+  z-index: 6;
+  opacity: 0;
+  animation-name: logo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes logo {
+      100% {
+        opacity: 1
+      }
+}
+
+.stick {
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 48.5%;
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+  overflow: hidden;
+  perspective: 2000;
+  z-index: 5;
+}
+
+#container {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: -150px;
+  left: -150px;
+  margin: auto;
+  overflow: hidden;
+  perspective: 2000;
+}
+
+.ball {
+  transform: translateX(0) translateY(0) scale(0);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+}
+.ball.ball-red {
+  background: tomato;
+}
+.ball.ball-blue {
+  background: lightskyblue;
+}
+
+.particule {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -.5rem 0 0 -.5rem;
+  background-color: currentColor;
+  transform: scale(0);
+  border-radius: 15px;
+}
